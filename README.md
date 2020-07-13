@@ -4,3 +4,5 @@
 
 Development began on July 13th 2020.
 Exploration to end August 24th 2020.
+
+https://github.com/gnurio/storyeven/blob/master/StoryEven%20Mockup.png
