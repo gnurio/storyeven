@@ -41,4 +41,10 @@ text-transform: capitalize;
     .div2 { grid-area: 2 / 2 / 3 / 5; }
     .div3 { grid-area: 3 / 2 / 4 / 5; }
     .div4 { grid-area: 4 / 2 / 5 / 5; }
-    .div5 { grid-area: 5 / 2 / 6 / 5; }
+    .div5 { grid-area: 5 / 2 / 6 / 5; } 
+
+
+#big-text {
+    max-width: 50vw;
+    
+}
