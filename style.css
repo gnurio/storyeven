@@ -1,32 +1,32 @@
 #main-title {
     font-family: Roboto;
-font-style: normal;
-font-weight: 900;
-font-size: 95.95px;
-line-height: 112px;
-text-transform: capitalize;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 95.95px;
+    line-height: 112px;
+    text-transform: capitalize;
 
 }
 
 #uvp {
-   
-font-family: Roboto;
-font-style: normal;
-font-weight: 900;
-font-size: 36.65px;
-line-height: 43px;
-/* identical to box height */
 
-text-transform: capitalize;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36.65px;
+    line-height: 43px;
+    /* identical to box height */
+
+    text-transform: capitalize;
 }
 
 h3 {
     font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 22.65px;
-line-height: 27px;
-text-transform: capitalize;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.65px;
+    line-height: 27px;
+    text-transform: capitalize;
 }
 
 .parent {
@@ -35,16 +35,56 @@ text-transform: capitalize;
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 2 / 2 / 5; }
-    .div2 { grid-area: 2 / 2 / 3 / 5; }
-    .div3 { grid-area: 3 / 2 / 4 / 5; }
-    .div4 { grid-area: 4 / 2 / 5 / 5; }
-    .div5 { grid-area: 5 / 2 / 6 / 5; } 
+}
+
+.div1 {
+    grid-area: 1 / 2 / 2 / 5;
+}
+
+.div2 {
+    grid-area: 2 / 2 / 3 / 5;
+}
+
+.div3 {
+    grid-area: 3 / 2 / 4 / 5;
+}
+
+.div4 {
+    grid-area: 4 / 2 / 5 / 5;
+}
+
+.div5 {
+    grid-area: 5 / 2 / 6 / 5;
+}
 
 
 #big-text {
     max-width: 50vw;
-    
+
+}
+
+.myButton {
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    background-color: #d0451b;
+    border-radius: 3px;
+    border: 1px solid #942911;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Grenze Gotisch';
+    font-size: 36.65px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+    background-color: #bc3315;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
 }
