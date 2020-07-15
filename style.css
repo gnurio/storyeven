@@ -88,3 +88,21 @@ h3 {
     position: relative;
     top: 1px;
 }
+
+#big-text::-webkit-resizer {
+    background-color: #bc3315;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-resizer {
+    background-color: transparent;
+}
+
+textarea {
+    box-shadow: inset 1px 2px 5px #000;
+    border-radius: 3px;
+}
