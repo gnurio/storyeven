@@ -10,7 +10,7 @@
     <meta name="keywords" content="storyeven">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto,Grenze+Gotisch:wght@600&display=swap"
         type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -28,13 +28,14 @@
                 <h4><label for="big-text">Paste your text below (max ~ 5000
                         words)</label></h4>
 
-                <textarea autofocus cols=8 rows=20 type="text" id="big-text" name="big-text" required
+                <textarea autofocus rows=20 type="text" id="big-text" name="big-text" required
                     maxlength="30000"></textarea>
             </div>
         </div>
-        <div class="div3"> <button class="myButton">⚡️ Make My Text Better</button></div>
-        <div class="div4"> line </div>
-    </div>
-</body>
+        <div class="div3"><canvas id="the-line"></canvas> </div>
 
+        <div class="div4"> <button class="myButton">⚡️ Make My Text Better</button></div>
+            </div>
+</body>
+<script src="js/script.js"></script>
 </html>
