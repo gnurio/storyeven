@@ -1,9 +1,13 @@
+body {
+    font-size: 16px;
+}
+
 #main-title {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 95.95px;
-    line-height: 112px;
+    font-size: 4rem;
+    
     text-transform: capitalize;
 
 }
