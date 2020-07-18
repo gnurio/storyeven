@@ -7,7 +7,7 @@ body {
     font-style: normal;
     font-weight: 900;
     font-size: 4rem;
-    
+
     text-transform: capitalize;
 
 }
@@ -68,10 +68,10 @@ h3 {
 }
 
 .myButton {
-    box-shadow: inset 0px 1px 0px 0px #cf866c;
-    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    background: #EDCF00;
+    box-shadow: 4px 8px 4px rgba(1, 1, 1, 0.25);
+    border-radius: 30px;
     background-color: #d0451b;
-    border-radius: 3px;
     border: 1px solid #942911;
     display: inline-block;
     cursor: pointer;
