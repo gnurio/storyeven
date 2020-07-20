@@ -14,4 +14,4 @@ Exploration to end August 24th 2020.
 
 🗺 [User Story Map](https://trello.com/b/9GwiVREM)
 
-😀 [Live!](https://dreamy-swirles-c0a943.netlify.app/)
+😀 [Live!](http://storyeven.xyz/)
