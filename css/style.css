@@ -1,9 +1,11 @@
 body {
     font-size: 16px;
+    font-family: 'Playfair Display', serif;
+
 }
 
 #main-title {
-    font-family: Roboto;
+   
     font-style: normal;
     font-weight: 900;
     font-size: 4rem;
@@ -14,11 +16,11 @@ body {
 
 #uvp {
 
-    font-family: Roboto;
+    
     font-style: normal;
     font-weight: 900;
     font-size: 36.65px;
-    line-height: 43px;
+
     /* identical to box height */
 
     text-transform: capitalize;
@@ -29,14 +31,14 @@ h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 22.65px;
-    line-height: 27px;
+    
     text-transform: capitalize;
 }
 
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -53,13 +55,8 @@ h3 {
     grid-area: 3 / 2 / 4 / 5;
 }
 
-.div4 {
-    grid-area: 4 / 2 / 5 / 5;
-}
 
-.div5 {
-    grid-area: 5 / 2 / 6 / 5;
-}
+
 
 
 #big-text {
@@ -76,7 +73,7 @@ h3 {
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-family: 'Grenze Gotisch';
+    
     font-size: 36.65px;
     padding: 6px 24px;
     text-decoration: none;
