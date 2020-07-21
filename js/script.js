@@ -1,4 +1,24 @@
+import MarkdownIt from 'markdown-it';
+var md = new MarkdownIt();
 
+
+drawLine();
+
+$(document).ready(function () {
+
+
+    $("#target").submit(function () {
+        let area = $("#big-text").val();
+        let words = area.split(" ");
+        let length = words.length;
+        alert(`The text has ${length} words and contains these words: ${words}. Greetings from ${rendy}`);
+    });
+
+    let rendy = md.parse(area,{});
+    console.log(rendy);
+
+
+})
 
 function drawLine() {
 
@@ -11,20 +31,3 @@ function drawLine() {
     ctx.strokeStyle = '#747e86';
     ctx.stroke();
 }
-
-drawLine();
-
-$(document).ready(function () {
-
-
-    $("#target").submit(function () {
-        let area = $("#big-text").val();
-        let words = area.split(" ");
-        let length = words.length;
-        alert(`The text has ${length} words and contains these words: ${words}`);
-    });
-
-
-
-
-})
