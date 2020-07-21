@@ -1,3 +1,5 @@
+
+
 function drawLine() {
 
     let c = document.getElementById('the-line');
