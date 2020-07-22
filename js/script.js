@@ -11,11 +11,10 @@ $(document).ready(function () {
         let area = $("#big-text").val();
         let words = area.split(" ");
         let length = words.length;
-        alert(`The text has ${length} words and contains these words: ${words}. Greetings from ${rendy}`);
+        alert(`The text has ${length} words and contains these words: ${words}`);
     });
 
-    let rendy = md.parse(area,{});
-    console.log(rendy);
+   
 
 
 })
