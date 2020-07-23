@@ -18,12 +18,13 @@ $(document).ready(function () {
 
     
 
-    $("#target").submit(function () {
+    $("#target").click(function (event) {
+        event.preventDefault();
         let area = $("#big-text").val();
         let words = area.split(" ");
         let length = words.length;
-        alert(`The text has ${length} words and contains these words: ${words}`);
-        $("#markdown-display").text(area);
+        let alrt = `The text has ${length} words and contains these words: ${words}`;
+        $("#markdown-display").text(alrt);
     });
 
    
