@@ -62,7 +62,7 @@ h3 {
 
 
 #big-text {
-    max-width: 50vw;
+    max-width: 60vw;
     margin-top: 20px;
     margin:0 auto;
     display:block;
@@ -113,7 +113,7 @@ h3 {
 }
 
 #big-text::-webkit-resizer {
-    background-color: #bc3315;
+    background-color: #000000;
 }
 
 .input-field {
@@ -132,11 +132,16 @@ textarea {
 }
 
 canvas {
-    width: 50vw;
+    width: 60vw;
+    max-width: 60vw;
+    margin-top: 20px;
+    margin:0 auto;
+    display:block;
+    text-align:center;
 }
 
 .btn {
- 
+    max-width: 50vw;
     margin:20px auto;
     display:block;
     text-align:center;
