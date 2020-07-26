@@ -12,18 +12,20 @@ function drawLine() {
 
 drawLine();
 
-$(document).ready(function(){
+$(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
         let area = $("#big-text").val();
-        
+
         var md = window.markdownit();
-    var result = md.render(area);
+        var result = md.render(area);
         
         $("#markdown-display").html(result);
-     
-    
+       
+
     });
-    
-    
+    let htmlResults = document.getElementById("#markdown-display");
+    console.log(htmlResults);
+
 });
+
