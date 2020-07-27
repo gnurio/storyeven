@@ -20,12 +20,18 @@ $(document).ready(function () {
         var md = window.markdownit();
         var result = md.render(area);
         
-        $("#markdown-display").html(result);
+        $("#markdown-display").html(result).addClass('html-text');
+
+        
        
 
     });
-    let htmlResults = document.getElementById("#markdown-display");
-    console.log(htmlResults);
+    
+    
 
 });
+
+let splitText = $('.html-text').get(0).innerHTML;
+        //let chunks = splitText.split(/<h1>|<\/h1>/g).filter((v) => v != "");
+        console.log(splitText);
 
