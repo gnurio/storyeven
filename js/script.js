@@ -10,28 +10,32 @@ function drawLine() {
     ctx.stroke();
 }
 
+const chunk = (str, n) => {
+    let ret = [];
+    let i;
+    let len;
+
+    for(i = 0, len = str.length; i<len;i+=n){
+        ret.push(str.substr(i,n))
+    }
+    return ret
+}
+
 drawLine();
+
 
 $(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
-        let area = $("#big-text").val();
-
-        var md = window.markdownit();
-        var result = md.render(area);
+        area = $("#big-text").val();
+        splitText = area.split(" ").toString();
+        let returns = chunk(splitText,300).join('## Heading ##');
+        len = splitText.length;
+        len <= 300 ? $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!") : $("#markdown-display").text(returns);
         
-        $("#markdown-display").html(result).addClass('html-text');
-
-        
-       
-
     });
-    
-    
+
+
 
 });
-
-let splitText = $('.html-text').get(0).innerHTML;
-        //let chunks = splitText.split(/<h1>|<\/h1>/g).filter((v) => v != "");
-        console.log(splitText);
 
