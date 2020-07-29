@@ -29,9 +29,11 @@ $(document).ready(function () {
         event.preventDefault();
         area = $("#big-text").val();
         splitText = area.split(" ").toString();
-        let returns = chunk(splitText,300).join('## Heading ##');
+        let returns = chunk(area,300*6).join(' #AddHeading ');
         len = splitText.length;
-        len <= 300 ? $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!") : $("#markdown-display").text(returns);
+        var md = window.markdownit();
+        let mkReturns = md.render(returns);
+        len <= 300 ? $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!") : $("#markdown-display").html(mkReturns);
         
     });
 
