@@ -108,6 +108,8 @@ h3 {
     font-size: 36.65px;
     padding: 6px 15px;
     text-decoration: none;
+    width: fit-content;
+    height: fit-content;
 
 }
 
