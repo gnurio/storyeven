@@ -2,13 +2,12 @@
     --placeholder-color: black;
 }
 
-@media only screen 
-   and (max-width : 400px) {
+@media  (max-width : 400px) {
    #main-title {
-       font-size: 22px;
+       font-size: 15vmin !important;
    };
    .the-button {
-    font-size: 16px;
+    font-size: 1vmin !important;
    }
 }
 
