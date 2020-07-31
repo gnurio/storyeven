@@ -41,7 +41,7 @@ $(document).ready(function () {
         event.preventDefault();
         area = $("#big-text").val();
         splitText = area.split(" ").toString();
-        let returns = chunk(area,300*7).join(' #AddHeading ');
+        let returns = chunk(area,300*7).join('\n# Add a heading here\n');
         len = splitText.length;
         var md = window.markdownit();
         let mkReturns = md.render(returns);
