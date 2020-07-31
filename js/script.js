@@ -5,8 +5,20 @@ function drawLine() {
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(400, 0);
-    ctx.lineWidth = 10;
+    ctx.lineWidth = 5;
     ctx.strokeStyle = '#747e86';
+    ctx.stroke();
+}
+
+function activateLine() {
+
+    let c = document.getElementById('the-line');
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(400, 0);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = '#000000';
     ctx.stroke();
 }
 
@@ -29,15 +41,23 @@ $(document).ready(function () {
         event.preventDefault();
         area = $("#big-text").val();
         splitText = area.split(" ").toString();
-        let returns = chunk(area,300*6).join(' #AddHeading ');
+        let returns = chunk(area,300*7).join(' #AddHeading ');
         len = splitText.length;
         var md = window.markdownit();
         let mkReturns = md.render(returns);
-        len <= 300 ? $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!") : $("#markdown-display").html(mkReturns);
+        
+        if(len <= 300) {
+            $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")}
+            else {
+                $("#markdown-display").html(mkReturns);
+                activateLine();
+            } 
         
     });
 
 
 
 });
+
+
 
