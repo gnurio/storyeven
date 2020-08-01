@@ -1,4 +1,4 @@
-function drawLine() {
+const drawLine = () => {
 
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
@@ -10,7 +10,7 @@ function drawLine() {
     ctx.stroke();
 }
 
-function activateLine() {
+const activateLine = () => {
 
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
@@ -22,7 +22,7 @@ function activateLine() {
     ctx.stroke();
 }
 
-const chunk = (str, n) => {
+const chunkText = (str, n) => {
     let ret = [];
     let i;
     let len;
@@ -39,17 +39,17 @@ drawLine();
 $(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
-        area = $("#big-text").val();
-        splitText = area.split(" ").toString();
-        let returns = chunk(area,300*7).join('\n# Add a heading here\n');
-        len = splitText.length;
-        var md = window.markdownit();
-        let mkReturns = md.render(returns);
+        let area = $("#big-text").val();
+        let splitText = area.split(" ").toString();
+        let chunks = chunkText(area,300*7).join('\n# Add a heading here\n');
+        let len = splitText.length;
+        let md = window.markdownit();
+        let mkdownChunks = md.render(chunks);
         
         if(len <= 300) {
             $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")}
             else {
-                $("#markdown-display").html(mkReturns);
+                $("#markdown-display").html(mkdownChunks);
                 activateLine();
             } 
         
@@ -60,4 +60,6 @@ $(document).ready(function () {
 });
 
 
-
+const markLine = () => {
+    
+}
