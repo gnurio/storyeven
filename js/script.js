@@ -10,13 +10,13 @@ const drawLine = () => {
     ctx.stroke();
 }
 
-const activateLine = () => {
+const activateLine = (n) => {
 
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(0, 0);
-    ctx.lineTo(400, 0);
+    ctx.lineTo(400, n);
     ctx.lineWidth = 10;
     ctx.strokeStyle = '#000000';
     ctx.stroke();
@@ -42,6 +42,8 @@ $(document).ready(function () {
         let area = $("#big-text").val();
         let splitText = area.split(" ").toString();
         let chunks = chunkText(area,300*7).join('\n# Add a heading here\n');
+        let headingsCount = chunks.match('\#');
+        console.log(headingsCount);
         let len = splitText.length;
         let md = window.markdownit();
         let mkdownChunks = md.render(chunks);
@@ -50,7 +52,7 @@ $(document).ready(function () {
             $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")}
             else {
                 $("#markdown-display").html(mkdownChunks);
-                activateLine();
+                activateLine(headingsCount);
             } 
         
     });
@@ -59,7 +61,3 @@ $(document).ready(function () {
 
 });
 
-
-const markLine = () => {
-    
-}
