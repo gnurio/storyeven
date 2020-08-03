@@ -15,8 +15,8 @@ const activateLine = (n) => {
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(400, n);
+    ctx.moveTo(400/n, 0);
+    ctx.lineTo(400, 0);
     ctx.lineWidth = 10;
     ctx.strokeStyle = '#000000';
     ctx.stroke();
@@ -42,7 +42,8 @@ $(document).ready(function () {
         let area = $("#big-text").val();
         let splitText = area.split(" ").toString();
         let chunks = chunkText(area,300*7).join('\n# Add a heading here\n');
-        let headingsCount = chunks.match('\#');
+        const regex = /[#]/g;
+        let headingsCount = chunks.match(regex).length;
         console.log(headingsCount);
         let len = splitText.length;
         let md = window.markdownit();
