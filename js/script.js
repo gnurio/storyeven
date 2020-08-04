@@ -10,17 +10,28 @@ const drawLine = () => {
     ctx.stroke();
 }
 
-const activateLine = (n) => {
+const activateLine = () => {
 
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.moveTo(400/n, 0);
+    ctx.moveTo(0, 0);
     ctx.lineTo(400, 0);
     ctx.lineWidth = 10;
     ctx.strokeStyle = '#000000';
     ctx.stroke();
 }
+
+function addDot(n) {
+    let c = document.getElementById('the-dot');
+    let ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(100/4,0);
+    ctx.lineTo(10,0);
+    ctx.lineWidth = 50;
+    ctx.strokeStyle = '#000000';
+    ctx.stroke();
+};
 
 const chunkText = (str, n) => {
     let ret = [];
@@ -53,7 +64,8 @@ $(document).ready(function () {
             $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")}
             else {
                 $("#markdown-display").html(mkdownChunks);
-                activateLine(headingsCount);
+                activateLine();
+                addDot(4)*4;
             } 
         
     });
