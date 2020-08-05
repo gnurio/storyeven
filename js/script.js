@@ -5,7 +5,7 @@ const drawLine = () => {
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(400, 0);
-    ctx.lineWidth = 5;
+    ctx.lineWidth = 2;
     ctx.strokeStyle = '#747e86';
     ctx.stroke();
 }
@@ -17,7 +17,7 @@ const activateLine = () => {
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.lineTo(400, 0);
-    ctx.lineWidth = 10;
+    ctx.lineWidth = 5;
     ctx.strokeStyle = '#000000';
     ctx.stroke();
 }
@@ -26,9 +26,10 @@ function addDot(n) {
     let c = document.getElementById('the-dot');
     let ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.moveTo(100/4,0);
-    ctx.lineTo(10,0);
-    ctx.lineWidth = 50;
+    ctx.moveTo(20, 20);
+    ctx.lineTo(20, 20);
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round"
     ctx.strokeStyle = '#000000';
     ctx.stroke();
 };
