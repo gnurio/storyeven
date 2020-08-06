@@ -14,25 +14,16 @@ const activateLine = () => {
 
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
+    
     ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(400, 0);
-    ctx.lineWidth = 5;
-    ctx.strokeStyle = '#000000';
+    ctx.moveTo(20, 0);
+    ctx.lineTo(20, 0);
+    ctx.lineWidth = 4;
+    
+    ctx.strokeStyle = '#aade4a';
     ctx.stroke();
 }
 
-function addDot(n) {
-    let c = document.getElementById('the-dot');
-    let ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.moveTo(20, 20);
-    ctx.lineTo(20, 20);
-    ctx.lineWidth = 5;
-    ctx.lineCap = "round"
-    ctx.strokeStyle = '#000000';
-    ctx.stroke();
-};
 
 const chunkText = (str, n) => {
     let ret = [];
@@ -66,7 +57,7 @@ $(document).ready(function () {
             else {
                 $("#markdown-display").html(mkdownChunks);
                 activateLine();
-                addDot(4)*4;
+           
             } 
         
     });
