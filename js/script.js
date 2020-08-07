@@ -19,7 +19,7 @@ const activateLine = () => {
     ctx.moveTo(20, 0);
     ctx.lineTo(20, 0);
     ctx.lineWidth = 4;
-    
+    ctx.lineCap = "round"
     ctx.strokeStyle = '#aade4a';
     ctx.stroke();
 }
