@@ -1,6 +1,10 @@
 {
-  "name": "storyeven",
+  "name": "StoryEven",
+  "description": "Evenly Distribute Headings In Your Document",
   "version": "1.0",
-  "description": "Distribute your text between headings evenly",
-  "dependencies": {}
+  "dependencies": {
+    "https://github.com/GitbookIO/tokenize-text": "1.1.3",
+    "https://github.com/markdown-it/markdown-it": "11.0.0"
+  }
 }
+

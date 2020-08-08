@@ -1,3 +1,6 @@
+var md = require('markdown-it')();
+
+
 const drawLine = () => {
 
     let c = document.getElementById('the-line');
@@ -14,13 +17,11 @@ const activateLine = () => {
 
     let c = document.getElementById('the-line');
     let ctx = c.getContext("2d");
-    
     ctx.beginPath();
-    ctx.moveTo(20, 0);
-    ctx.lineTo(20, 0);
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round"
-    ctx.strokeStyle = '#aade4a';
+    ctx.moveTo(0, 0);
+    ctx.lineTo(400, 0);
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000000';
     ctx.stroke();
 }
 
@@ -47,9 +48,8 @@ $(document).ready(function () {
         let chunks = chunkText(area,300*7).join('\n# Add a heading here\n');
         const regex = /[#]/g;
         let headingsCount = chunks.match(regex).length;
-        console.log(headingsCount);
+        
         let len = splitText.length;
-        let md = window.markdownit();
         let mkdownChunks = md.render(chunks);
         
         if(len <= 300) {

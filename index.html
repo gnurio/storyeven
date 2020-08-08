@@ -27,8 +27,8 @@
     </script>
     <!-- End Google Tag Manager -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" async="true"></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.0/markdown-it.min.js></script>
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<!--<script src=https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.0/markdown-it.min.js></script>-->
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     
@@ -42,17 +42,14 @@
     <div class="parent">
         <div class="div1">
             <h1 id='main-title'>StoryEven</h1>
-            <h2 id='uvp'>Evenly Distribute Your Document Between Headings</h2>
-            <h3>Visualise the whole text on a timeline.
-
-                Delete and re-write long parts and make your stories more engaging.</h3>
+            <h2 id='uvp'>Evenly Distribute Headings In Your Document</h2>
+            <h3>Make your document more scannable. Add headings at each ~ 300 words.</h3>
 
         </div>
         <div class="div2">
             <div class="input-field">
                 <form id="target">
-                    <h4><label for="big-text">Paste your text below (max ~ 5000
-                            words)</label></h4>
+                    <h4><label for="big-text">Paste your text below (min ~ 300 words)</label></h4>
 
                     <textarea autofocus rows=20 type="text" id="big-text" name="big-text" required maxlength="30000"
                         placeholder="I met a traveller from an antique land...
@@ -64,7 +61,7 @@
         </div>
         <div class="div3">
             <div id="markdown-display"></div>
-            <div id="pointer"></div>
+            <div id="pointer"><span class="circle"></span></div>
             <canvas width="100" height="100" id="the-line"></canvas>
           
             
