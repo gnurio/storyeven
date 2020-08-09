@@ -1,4 +1,5 @@
-var md = require('markdown-it')();
+var MarkdownIt = require('markdown-it'),
+    md = new MarkdownIt();
 
 
 const drawLine = () => {
