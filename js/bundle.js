@@ -51,8 +51,9 @@ $(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
         let area = $("#big-text").val();
-        let splitText = area.split(" ").toString();
-        let chunks = chunkText(area, 300 * 7).join('\n# Add a heading here\n');
+        let splitText = tokenize.words(area);
+        //let splitText = area.split(" ").toString();
+        let chunks = chunkText(splitText, 300).join('\n# Add a heading here\n');
         const regex = /[#]/g;
         let headingsCount = chunks.match(regex).length;
 
