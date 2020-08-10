@@ -1,5 +1,10 @@
+"use strict";
+
 var MarkdownIt = require('markdown-it'),
     md = new MarkdownIt();
+
+var Tokenizer = require('tokenize-text');
+var tokenize = new Tokenizer();
 
 
 const drawLine = () => {
@@ -32,8 +37,8 @@ const chunkText = (str, n) => {
     let i;
     let len;
 
-    for(i = 0, len = str.length; i<len;i+=n){
-        ret.push(str.substr(i,n))
+    for (i = 0, len = str.length; i < len; i += n) {
+        ret.push(str.substr(i, n))
     }
     return ret
 }
@@ -45,25 +50,25 @@ $(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
         let area = $("#big-text").val();
-        let splitText = area.split(" ").toString();
-        let chunks = chunkText(area,300*7).join('\n# Add a heading here\n');
+        let splitText = tokenize.words(area);
+        //let splitText = area.split(" ").toString();
+        let chunks = chunkText(splitText, 300).join('\n# Add a heading here\n');
         const regex = /[#]/g;
         let headingsCount = chunks.match(regex).length;
-        
+
         let len = splitText.length;
         let mkdownChunks = md.render(chunks);
-        
-        if(len <= 300) {
-            $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")}
-            else {
-                $("#markdown-display").html(mkdownChunks);
-                activateLine();
-           
-            } 
-        
+
+        if (len <= 300) {
+            $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")
+        } else {
+            $("#markdown-display").html(mkdownChunks);
+            activateLine();
+
+        }
+
     });
 
 
 
 });
-
