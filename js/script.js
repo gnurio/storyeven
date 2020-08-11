@@ -1,10 +1,10 @@
 "use strict";
 
 var MarkdownIt = require('markdown-it'),
-    md = new MarkdownIt();
+    md = new MarkdownIt(); // trying to use Markdown-it here. Before I used the CDN link in HTML and that worked.
 
 var Tokenizer = require('tokenize-text');
-var tokenize = new Tokenizer();
+var tokenize = new Tokenizer(); // but Tokenize-text doesn't have a link I can paste in HTML, so I need to use it here
 
 
 const drawLine = () => {
@@ -51,10 +51,11 @@ $(document).ready(function () {
         event.preventDefault();
         let area = $("#big-text").val();
         let splitText = tokenize.words(area);
-        //let splitText = area.split(" ").toString();
+
+        //        let splitText = area.split(" ").toString();
         let chunks = chunkText(splitText, 300).join('\n# Add a heading here\n');
         const regex = /[#]/g;
-        let headingsCount = chunks.match(regex).length;
+        //        let headingsCount = chunks.match(regex).length;
 
         let len = splitText.length;
         let mkdownChunks = md.render(chunks);
