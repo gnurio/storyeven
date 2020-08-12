@@ -1,0 +1,9 @@
+{
+  "name": "storyeven",
+  "description": "Evenly Distribute Headings In Your Document",
+  "version": "1.0",
+  "dependencies": {
+    "https://github.com/markdown-it/markdown-it": "11.0.0",
+    "https://github.com/GitbookIO/tokenize-text": "1.1.3"
+  }
+}
