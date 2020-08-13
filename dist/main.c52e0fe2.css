@@ -1,0 +1,161 @@
+::root {
+    --placeholder-color: black;
+}
+
+@media  (max-width : 400px) {
+   #main-title {
+       font-size: 15vmin !important;
+   };
+   .the-button {
+    font-size: 10px !important;
+   }
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+
+}
+
+#main-title {
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4rem;
+
+    text-transform: capitalize;
+
+}
+
+#uvp {
+
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36.65px;
+
+    /* identical to box height */
+
+    text-transform: capitalize;
+}
+
+h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.65px;
+
+    text-transform: capitalize;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+   
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+}
+
+.div1 {
+    grid-area: 1 / 2 / 2 / 5;
+}
+
+.div2 {
+    grid-area: 2 / 2 / 3 / 5;
+}
+
+.div3 {
+    grid-area: 3 / 2 / 4 / 5;
+}
+
+
+
+#big-text {
+    max-width: 60vw;
+    margin-top: 20px;
+    margin:0 auto;
+    display:block;
+   
+
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--placeholder-color);
+    padding: 10px 0px 0px 10px
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color:var(--placeholder-color);
+    padding: 10px 0px 0px 10px
+  }
+  
+  :-ms-input-placeholder { /* IE 10+ */
+    color:var(--placeholder-color);
+    padding: 10px 0px 0px 10px
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+    color:var(--placeholder-color);
+    padding: 10px 0px 0px 10px
+  }
+  
+
+.the-button {
+   
+    box-shadow: 4px 8px 0px rgba(1, 1, 1, 1);
+    display: inline-block;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.89);
+    
+    padding: 6px 15px;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+
+.the-button:active {
+    position: relative;
+    top: 1px;
+}
+
+.the-button:hover {
+    color: rgba(0, 0, 0);
+}
+
+#big-text::-webkit-resizer {
+    background-color: #000000;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-resizer {
+    background-color: lightgrey;
+}
+
+textarea {
+    box-shadow: inset 1px 2px 5px #000;
+    border-radius: 3px;
+    width: 50vw;
+}
+
+canvas {
+    width: 60vw;
+    max-width: 60vw;
+    margin-top: 20px;
+    margin:0 auto;
+    display:block;
+    text-align:center;
+}
+
+.btn {
+    max-width: 50vw;
+    margin:20px auto;
+    display:block;
+    text-align:center;
+}
+
+/*# sourceMappingURL=/main.c52e0fe2.css.map */
