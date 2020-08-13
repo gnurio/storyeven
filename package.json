@@ -2,7 +2,7 @@
   "name": "storyeven",
   "version": "1.0.0",
   "description": "## Take any text and analyse the headings distribution to have a more readable & scanable text. StoryEven will distribute your text between headings evenly.",
-  "main": "index.js",
+  "main": "script.js",
   "dependencies": {
     "markdown-it": "^11.0.0",
     "tokenize-text": "^1.1.3"
