@@ -4,11 +4,11 @@
   "description": "## Take any text and analyse the headings distribution to have a more readable & scanable text. StoryEven will distribute your text between headings evenly.",
   "main": "script.js",
   "dependencies": {
-    "https://github.com/markdown-it/markdown-it": "^11.0.0",
-    "https://github.com/GitbookIO/tokenize-text": "^1.1.3"
+    "markdown-it": "^11.0.0",
+    "tokenize-text": "^1.1.3"
   },
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel-bundler": "^1.12.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
