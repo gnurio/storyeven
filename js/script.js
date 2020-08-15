@@ -1,7 +1,7 @@
 "use strict";
 
-const MarkdownIt = require('markdown-it'), md = new MarkdownIt();// trying to use Markdown-it here. Before I used the CDN link in HTML and that worked.
-const Tokenizer = require('tokenize-text'), tokenize = new Tokenizer(); // but Tokenize-text doesn't have a link I can paste in HTML, so I need to use it here
+const md = window.markdownit();;// trying to use Markdown-it here. Before I used the CDN link in HTML and that worked.
+const tokenize = windown.tokenizer(); // but Tokenize-text doesn't have a link I can paste in HTML, so I need to use it here
 
 
 const drawLine = () => {
