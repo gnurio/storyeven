@@ -1,5 +1,3 @@
-"use strict";
-
 const md = window.markdownit();// trying to use Markdown-it here
 const tokenize = new Tokenizer(); // but Tokenize-text doesn't have a link I can paste in HTML, so I need to use it here
 
