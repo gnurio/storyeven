@@ -1,5 +1,5 @@
 const md = window.markdownit();// trying to use Markdown-it here
-const tokenize = new Tokenizer(); // but Tokenize-text doesn't have a link I can paste in HTML, so I need to use it here
+//const tokenize = new Tokenizer(); // but Tokenize-text doesn't have a link I can paste in HTML, so I need to use it here
 
 
 const drawLine = () => {
@@ -45,9 +45,9 @@ $(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
         let area = $("#big-text").val();
-        let splitText = tokenize.words(area);
+        //let splitText = tokenize.words(area);
 
-        //        let splitText = area.split(" ").toString();
+        let splitText = area.split(" ").toString();
         let chunks = chunkText(splitText, 300).join('\n# Add a heading here\n');
         const regex = /[#]/g;
         //        let headingsCount = chunks.match(regex).length;
