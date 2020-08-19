@@ -39,18 +39,15 @@ const chunkText = (str, n) => {
 }
 
 const chunkTextArr = (arr, n) => {
-    let ret = [];
-    let i;
-    let len;
-    let n2 = 0;
-    for (i = 0, len = arr.length; i < len; i += n) {
-        ret.push(arr.slice(i, n2));
-        n2+=n; //something's off here
-        console.log(arr.slice(i,n2));
-    }
-    return ret;
-};
-
+    let newArr = arr.slice();
+    let idx = n;
+      while(idx <= newArr.length){
+        newArr.splice(idx, 0,'\n# Add a heading here\n');
+        idx += n + 1;
+         }
+      return newArr.join(' ');
+    };
+//TODO: Recognize end of sentences and paragraphs
 
 drawLine();
 
@@ -59,14 +56,10 @@ $(document).ready(function () {
     $("#target").click(function (event) {
         event.preventDefault();
         let area = $("#big-text").val();
-        //let splitText = tokenize.words(area);
-
         let splitText = area.split(" ");
-        //console.log( splitText); // go through splitText, find every 300th word, insert (change chunkText)
-        let chunks = chunkTextArr(splitText, 300).join('\n# Add a heading here\n');
-        //const regex = /[#]/g;
-        //        let headingsCount = chunks.match(regex).length;
-
+        
+        let chunks = chunkTextArr(splitText, 300);
+        
         let len = splitText.length;
         let mkdownChunks = md.render(chunks);
 
