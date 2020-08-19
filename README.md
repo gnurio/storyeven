@@ -12,6 +12,8 @@ Exploration to end August 24th 2020.
 
 🏁 [Documentation](https://docs.google.com/document/d/1HQJ-1nXLe_hySJ5nUK6tTvUB1g8QsYtOdZcU8FX3v90/edit?usp=sharing)
 
-🗺 [User Story Map](https://trello.com/b/9GwiVREM)
+🗺 [User Story Map](https://miro.com/app/board/o9J_knXf8rY=/)
+
+📊 [Sprint Backlog](https://trello.com/b/9GwiVREM)
 
 😀 [Live!](http://storyeven.xyz/)

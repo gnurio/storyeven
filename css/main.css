@@ -14,8 +14,15 @@
 body {
     font-size: 16px;
     font-family: 'Playfair Display', serif;
-
+    
 }
+header{
+    text-align: right;
+}
+footer{
+    text-align: center;
+}
+
 
 #main-title {
 
@@ -51,10 +58,15 @@ h3 {
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-   
+    grid-template-areas: "head head"
+    "main main"
+    "foot foot";
     grid-column-gap: 0px;
     grid-row-gap: 50px;
 }
+
+
+
 
 .div1 {
     grid-area: 1 / 2 / 2 / 5;
