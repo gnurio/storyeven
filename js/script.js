@@ -58,7 +58,7 @@ $(document).ready(function () {
         let area = $("#big-text").val();
         let splitText = area.split(" ");
         
-        let chunks = chunkTextArr(splitText, 300);
+        let chunks = chunkTextArr(splitText, 250);
         
         let len = splitText.length;
         let mkdownChunks = md.render(chunks);
