@@ -53,7 +53,7 @@ drawLine();
 
 
 $(document).ready(function () {
-    $("#target").click(function (event) {
+    $("#target").submit(function (event) {
         event.preventDefault();
         let area = $("#big-text").val();
         let splitText = area.split(" ");
