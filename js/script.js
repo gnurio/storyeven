@@ -63,8 +63,8 @@ $(document).ready(function () {
         let len = splitText.length;
         let mkdownChunks = md.render(chunks);
 
-        if (len <= 300) {
-            $("#markdown-display").text("Not long enough. Once you get to ~ 300 words, try me again!")
+        if (len <= 250) {
+            $("#markdown-display").text("Not long enough. Once you get to ~ 250 words, try me again!")
         } else {
             $("#markdown-display").html(mkdownChunks);
             activateLine();
