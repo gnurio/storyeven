@@ -487,6 +487,114 @@ footer a:hover {
 }
 
 /* ============================================================
+   TEXT PREVIEW WITH HEADINGS
+   ============================================================ */
+.text-preview-section {
+  margin-top: 2.5rem;
+}
+
+.text-preview {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--c-text);
+}
+
+.text-preview p {
+  margin-bottom: 1.1em;
+}
+
+.preview-intro {
+  color: var(--c-muted);
+  font-style: italic;
+}
+
+/* Heading levels inside the preview */
+h1.preview-heading,
+h2.preview-heading,
+h3.preview-heading,
+h4.preview-heading,
+h5.preview-heading,
+h6.preview-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2rem 0 0.75rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--c-text);
+}
+
+h1.preview-heading { font-size: 1.65rem; }
+h2.preview-heading { font-size: 1.3rem;  }
+h3.preview-heading { font-size: 1.1rem;  }
+h4.preview-heading,
+h5.preview-heading,
+h6.preview-heading { font-size: 1rem; font-style: italic; }
+
+.preview-heading--good  { border-left-color: var(--c-good); }
+.preview-heading--long  { border-left-color: var(--c-long); }
+.preview-heading--short { border-left-color: var(--c-short); color: var(--c-short); }
+
+/* ── Insertion marker ── */
+.insertion-marker {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.insertion-marker__line {
+  flex: 1;
+  height: 0;
+  border-top: 2px dashed #e5c04e;
+  min-width: 12px;
+}
+
+.insertion-marker__pill {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  max-width: 78%;
+  overflow: hidden;
+  background: #fffbec;
+  border: 1.5px solid #e5c04e;
+  border-radius: 100px;
+  padding: 0.3rem 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #7c5f00;
+  white-space: nowrap;
+}
+
+.insertion-marker__icon {
+  flex-shrink: 0;
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+
+.insertion-marker__sentence {
+  font-weight: 400;
+  color: var(--c-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* Short section nudge */
+.short-hint {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--c-short);
+  margin: -0.6em 0 1.25em;
+  padding: 0.35rem 0.7rem;
+  background: #fff3eb;
+  border-left: 3px solid var(--c-short);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 560px) {
@@ -512,6 +620,11 @@ footer a:hover {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  /* Hide the sentence snippet on small screens — just show the pill label */
+  .insertion-marker__sentence {
+    display: none;
   }
 }
 
